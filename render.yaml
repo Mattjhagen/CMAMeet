@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: zoom-clone
+    name: cmameet
     env: node
     buildCommand: ./build.sh
     startCommand: node index.js

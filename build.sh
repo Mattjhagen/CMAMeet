@@ -24,7 +24,8 @@ fi
 # Copy server files to root directory for Render
 echo "📋 Copying server files to root directory..."
 if [ -d "server" ]; then
-  cp -r server/* ./
+  cp server/index.js ./
+  cp server/package.json ./server-package.json
   echo "✅ Server files copied to root directory"
 else
   echo "❌ Server directory not found"
@@ -32,7 +33,7 @@ fi
 
 # Install server dependencies in root directory
 echo "📦 Installing server dependencies in root directory..."
-npm install express socket.io cors uuid
+npm install express@^4.18.2 socket.io@^4.7.2 cors@^2.8.5 uuid@^9.0.0
 echo "✅ Server dependencies installed in root directory"
 
 echo "✅ Build completed successfully!"
