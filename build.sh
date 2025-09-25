@@ -37,6 +37,12 @@ mkdir -p src/index
 cp server/index.js src/index/index.js
 echo "✅ Created src/index/index.js for Render compatibility"
 
+# Also create the path that Render is actually trying to use
+echo "📁 Creating alternative directory structure..."
+mkdir -p index
+cp server/index.js index/index.js
+echo "✅ Created index/index.js for Render compatibility"
+
 # Install server dependencies in root directory
 echo "📦 Installing server dependencies in root directory..."
 npm install express@^4.18.2 socket.io@^4.7.2 cors@^2.8.5 uuid@^9.0.0

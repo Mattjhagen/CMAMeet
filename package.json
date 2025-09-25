@@ -2,14 +2,14 @@
   "name": "cmameet",
   "version": "1.0.0",
   "description": "CMA Virtual Meetings - Crystal Meth Anonymous online support group meetings",
-  "main": "src/index/index.js",
+  "main": "index/index.js",
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "cd server && npm run dev",
     "client": "cd client && npm start",
     "install-all": "npm install && cd server && npm install && cd ../client && npm install",
     "build": "npm run install-all && cd client && npm run build",
-    "start": "node src/index/index.js",
+    "start": "node index/index.js",
     "heroku-postbuild": "npm run build",
     "render-postbuild": "npm run build"
   },
