@@ -1,17 +1,25 @@
 <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Four overlapping circles with heart icon in center -->
-  <!-- Top-left circle - medium blue -->
-  <circle cx="180" cy="180" r="120" fill="#4A90E2" opacity="0.9"/>
+  <!-- Black background -->
+  <rect width="512" height="512" fill="#000000"/>
   
-  <!-- Top-right circle - purple -->
-  <circle cx="332" cy="180" r="120" fill="#8B5CF6" opacity="0.9"/>
+  <!-- White circular outline -->
+  <circle cx="256" cy="200" r="80" fill="none" stroke="#FFFFFF" stroke-width="8"/>
   
-  <!-- Bottom-left circle - dark blue -->
-  <circle cx="180" cy="332" r="120" fill="#1E3A8A" opacity="0.9"/>
+  <!-- Handshake icon inside circle -->
+  <!-- Left hand -->
+  <path d="M200 180 C200 180, 190 170, 190 180 C190 190, 200 200, 200 200 C200 200, 210 190, 210 180 C210 170, 200 180, 200 180 Z" fill="#FFFFFF"/>
+  <path d="M200 180 C200 180, 195 175, 195 180 C195 185, 200 190, 200 190 C200 190, 205 185, 205 180 C205 175, 200 180, 200 180 Z" fill="#FFFFFF"/>
   
-  <!-- Bottom-right circle - light gray -->
-  <circle cx="332" cy="332" r="120" fill="#9CA3AF" opacity="0.9"/>
+  <!-- Right hand -->
+  <path d="M312 180 C312 180, 322 170, 322 180 C322 190, 312 200, 312 200 C312 200, 302 190, 302 180 C302 170, 312 180, 312 180 Z" fill="#FFFFFF"/>
+  <path d="M312 180 C312 180, 317 175, 317 180 C317 185, 312 190, 312 190 C312 190, 307 185, 307 180 C307 175, 312 180, 312 180 Z" fill="#FFFFFF"/>
   
-  <!-- Heart icon in the center -->
-  <path d="M256 200 C256 200, 220 170, 220 200 C220 230, 256 260, 256 260 C256 260, 292 230, 292 200 C292 170, 256 200, 256 200 Z" fill="white" stroke="white" stroke-width="2"/>
+  <!-- Clasped hands in center -->
+  <path d="M256 190 C256 190, 240 185, 240 195 C240 205, 256 210, 256 210 C256 210, 272 205, 272 195 C272 185, 256 190, 256 190 Z" fill="#FFFFFF"/>
+  
+  <!-- CMA text -->
+  <text x="256" y="350" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="#FFFFFF">CMA</text>
+  
+  <!-- Meet text -->
+  <text x="256" y="400" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="#FFFFFF">MEET</text>
 </svg>
