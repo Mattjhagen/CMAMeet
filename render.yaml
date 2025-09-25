@@ -3,4 +3,4 @@ services:
     name: cmameet
     env: node
     buildCommand: ./build.sh
-    startCommand: node index.js
+    startCommand: node src/index/index.js

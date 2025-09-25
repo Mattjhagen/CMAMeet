@@ -31,6 +31,12 @@ else
   echo "❌ Server directory not found"
 fi
 
+# Create the directory structure that Render expects
+echo "📁 Creating expected directory structure..."
+mkdir -p src/index
+cp server/index.js src/index/index.js
+echo "✅ Created src/index/index.js for Render compatibility"
+
 # Install server dependencies in root directory
 echo "📦 Installing server dependencies in root directory..."
 npm install express@^4.18.2 socket.io@^4.7.2 cors@^2.8.5 uuid@^9.0.0
