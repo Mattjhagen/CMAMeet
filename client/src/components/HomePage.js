@@ -32,6 +32,48 @@ const HeaderSubtitle = styled.p`
   margin-bottom: 30px;
 `;
 
+const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+`;
+
+const Logo = styled.div`
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  
+  svg {
+    width: 60px;
+    height: 60px;
+  }
+`;
+
+const LogoText = styled.div`
+  text-align: left;
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+  
+  p {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin: 5px 0 0 0;
+  }
+`;
+
 const ResourceLinks = styled.div`
   display: flex;
   gap: 20px;
@@ -421,8 +463,31 @@ const HomePage = () => {
   return (
     <Container>
       <PageHeader>
-        <HeaderTitle>CMA Virtual Meetings</HeaderTitle>
-        <HeaderSubtitle>Supporting recovery through connection</HeaderSubtitle>
+        <LogoContainer>
+          <Logo>
+            <svg width="60" height="60" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* Four overlapping circles with heart icon in center */}
+              {/* Top-left circle - medium blue */}
+              <circle cx="180" cy="180" r="120" fill="#4A90E2" opacity="0.9"/>
+              
+              {/* Top-right circle - purple */}
+              <circle cx="332" cy="180" r="120" fill="#8B5CF6" opacity="0.9"/>
+              
+              {/* Bottom-left circle - dark blue */}
+              <circle cx="180" cy="332" r="120" fill="#1E3A8A" opacity="0.9"/>
+              
+              {/* Bottom-right circle - light gray */}
+              <circle cx="332" cy="332" r="120" fill="#9CA3AF" opacity="0.9"/>
+              
+              {/* Heart icon in the center */}
+              <path d="M256 200 C256 200, 220 170, 220 200 C220 230, 256 260, 256 260 C256 260, 292 230, 292 200 C292 170, 256 200, 256 200 Z" fill="white" stroke="white" strokeWidth="2"/>
+            </svg>
+          </Logo>
+          <LogoText>
+            <h1>CMA Virtual Meetings</h1>
+            <p>Supporting recovery through connection</p>
+          </LogoText>
+        </LogoContainer>
         
         <ResourceLinks>
           <ResourceLink href="https://www.crystalmeth.org/" target="_blank" rel="noopener noreferrer">
@@ -450,7 +515,7 @@ const HomePage = () => {
             However, we are fully self-supporting and do accept donations to help maintain this virtual meeting platform.
           </DonationText>
           <DonationButton 
-            href="https://www.venmo.com/u/PackieMobile" 
+            href="https://account.venmo.com/u/UnSungMinistries" 
             target="_blank" 
             rel="noopener noreferrer"
           >
