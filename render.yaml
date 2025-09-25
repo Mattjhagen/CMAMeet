@@ -3,7 +3,7 @@ services:
     name: cmameet
     env: node
     buildCommand: ./build.sh
-    startCommand: node index.js
+    startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production

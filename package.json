@@ -1,19 +1,19 @@
 {
-  "name": "zoom-clone",
+  "name": "cmameet",
   "version": "1.0.0",
-  "description": "A free clone of Zoom for video conferencing",
-  "main": "server/index.js",
+  "description": "CMA Virtual Meetings - Crystal Meth Anonymous online support group meetings",
+  "main": "index.js",
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "cd server && npm run dev",
     "client": "cd client && npm start",
     "install-all": "npm install && cd server && npm install && cd ../client && npm install",
     "build": "npm run install-all && cd client && npm run build",
-    "start": "cd server && npm start",
+    "start": "node index.js",
     "heroku-postbuild": "npm run build",
     "render-postbuild": "npm run build"
   },
-  "keywords": ["video", "conferencing", "zoom", "webrtc", "socket.io"],
+  "keywords": ["cma", "crystal-meth-anonymous", "recovery", "meetings", "video", "conferencing", "webrtc", "socket.io"],
   "author": "Your Name",
   "license": "MIT",
   "devDependencies": {
