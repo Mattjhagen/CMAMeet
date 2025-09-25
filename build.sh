@@ -42,4 +42,13 @@ ls -la client/build/ || echo "Build directory not found"
 echo "📁 Root directory contents:"
 ls -la ./
 
+# Verify index.js exists and is executable
+if [ -f "index.js" ]; then
+  echo "✅ index.js found in root directory"
+  echo "📄 index.js first few lines:"
+  head -5 index.js
+else
+  echo "❌ index.js NOT found in root directory"
+fi
+
 echo "🎯 Ready for deployment!"
