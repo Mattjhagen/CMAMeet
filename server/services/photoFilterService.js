@@ -1,3 +1,6 @@
+// Import TensorFlow.js Node.js backend for better performance
+require('@tensorflow/tfjs-node');
+
 const sharp = require('sharp');
 const faceapi = require('face-api.js');
 const { Canvas, Image, ImageData } = require('canvas');
