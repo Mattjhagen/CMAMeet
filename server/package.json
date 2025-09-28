@@ -10,7 +10,7 @@
     "postinstall": "echo 'Dependencies installed successfully'"
   },
   "dependencies": {
-    "@tensorflow/tfjs-node": "^4.15.0",
+    "@tensorflow/tfjs-node": "^4.22.0",
     "bcryptjs": "^2.4.3",
     "canvas": "^3.2.0",
     "cloudinary": "^1.41.0",
