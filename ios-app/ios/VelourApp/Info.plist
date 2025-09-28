@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Velour</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.pacmacmobile.velour</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>velour.live</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSExceptionMinimumTLSVersion</key>
+				<string>TLSv1.0</string>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Velour needs location access to show you nearby creators and events.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Velour needs camera access to let you take photos and videos for your content.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Velour needs microphone access to record audio for your videos and voice messages.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Velour needs photo library access to let you select and upload photos and videos.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Velour needs contacts access to help you find friends who are already on the platform.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Velour uses Face ID for secure and convenient authentication.</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Velour needs calendar access to help you schedule live sessions with creators.</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>Velour needs reminders access to notify you about upcoming live sessions and new content.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Velour uses motion data to enhance your video recording experience.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Velour needs health data access to provide personalized wellness content.</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Velour needs health data access to provide personalized wellness content.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Velour needs Bluetooth access to connect with external audio devices.</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Velour needs Bluetooth access to connect with external audio devices.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Velour needs speech recognition to provide voice-to-text features for accessibility.</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>Velour uses tracking to provide personalized content and improve your experience.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+		<string>background-processing</string>
+		<string>background-fetch</string>
+		<string>remote-notification</string>
+	</array>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Inter-Regular.ttf</string>
+		<string>Inter-Medium.ttf</string>
+		<string>Inter-SemiBold.ttf</string>
+		<string>Inter-Bold.ttf</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>velour</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>velour</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>auth0</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.pacmacmobile.velour</string>
+			</array>
+		</dict>
+	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>velour</string>
+		<string>https</string>
+		<string>http</string>
+	</array>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>com.pacmacmobile.velour.content</string>
+		<string>com.pacmacmobile.velour.creator</string>
+		<string>com.pacmacmobile.velour.message</string>
+	</array>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UIStatusBarHidden</key>
+	<false/>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+</dict>
+</plist>
