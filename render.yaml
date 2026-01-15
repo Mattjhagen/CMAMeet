@@ -2,5 +2,5 @@ services:
   - type: web
     name: cmameet
     env: node
-    buildCommand: ./build.sh
+    buildCommand: chmod +x build.sh && ./build.sh
     startCommand: node index/index.js
