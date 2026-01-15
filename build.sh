@@ -15,8 +15,9 @@ cd client && npm run build && cd ..
 # Copy build files to root directory for Render
 echo "📋 Copying build files to root directory..."
 if [ -d "client/build" ]; then
-  cp -r client/build/* ./
-  echo "✅ Build files copied to root directory"
+  mkdir -p build
+  cp -r client/build/* build/
+  echo "✅ Build files copied to build directory"
 else
   echo "❌ Build directory not found"
 fi
