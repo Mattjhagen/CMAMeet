@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams, useLocation } from 'react-router-dom';
 import { Heart, Plus, ArrowRight, Users, ExternalLink, Calendar, DollarSign, Phone } from 'lucide-react';
 import styled from 'styled-components';
 
@@ -371,10 +371,20 @@ const quotes = [
 ];
 
 const HomePage = () => {
-  const [name, setName] = useState('');
+  const [searchParams] = useSearchParams();
+  const location = useLocation();
+  const [name, setName] = useState(searchParams.get('name') || '');
   const [roomId, setRoomId] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+
+  // Direct room links only prefill the form until the user clicks Join.
+  useEffect(() => {
+    const pathMatch = location.pathname.match(/\/room\/([A-Z0-9]+)/i);
+    if (pathMatch && pathMatch[1]) {
+      setRoomId(pathMatch[1].toUpperCase());
+    }
+  }, [location.pathname]);
 
   const [currentQuote, setCurrentQuote] = useState(quotes[0]);
 
@@ -432,7 +442,7 @@ const HomePage = () => {
 
       const data = await response.json();
       if (data.success) {
-        navigate(`/room/${data.roomId}?name=${encodeURIComponent(name)}`);
+        navigate(`/room/${data.roomId}?name=${encodeURIComponent(name)}`, { state: { joinMeeting: true } });
       } else {
         alert('Failed to create room. Please try again.');
       }
@@ -440,7 +450,7 @@ const HomePage = () => {
       console.error('Error creating room:', error);
       // Fallback: generate room ID locally
       const fallbackRoomId = Math.random().toString(36).substring(2, 8).toUpperCase();
-      navigate(`/room/${fallbackRoomId}?name=${encodeURIComponent(name)}`);
+      navigate(`/room/${fallbackRoomId}?name=${encodeURIComponent(name)}`, { state: { joinMeeting: true } });
     } finally {
       setIsLoading(false);
     }
@@ -457,7 +467,7 @@ const HomePage = () => {
       return;
     }
 
-    navigate(`/room/${roomId.trim()}?name=${encodeURIComponent(name)}`);
+    navigate(`/room/${roomId.trim()}?name=${encodeURIComponent(name)}`, { state: { joinMeeting: true } });
   };
 
   return (
